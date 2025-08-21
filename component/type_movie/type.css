@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+a:hover {
+    color: orange;
+}
+/* Định dạn phông chữ, khoảng cách dòng, màu nền */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+}
+
+/* Định dạng phần header */
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 10%
+}
+
+.logo {
+    padding-left: 10%;
+}
+
+.logo a {
+    color: red;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 0px 30px;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+.search_container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.search_container button p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#logoutBtn {
+    display: none;
+    width: 30%;
+    height: 40px;
+    background-color: #888;
+}
+
+.login_button {
+    display: block;
+}
+
+.search_container p {
+    font-weight: bold;
+}
+
+.search_button {
+    width: 100px;
+    height: 45px;
+    padding: 10px 18px;
+    margin: 8px 0;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_bar {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.search_button {
+  width: 100px;
+  height: 45px;
+  padding: 10px 18px;
+  margin: 8px 0;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+}
+
+
+.dropdown-results {
+  position: absolute;
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  border-top: none;
+  width: 15%;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 9999;
+  border-radius: 0 0 6px 6px;
+  top: 100%;
+  right: 15%;
+}
+
+.dropdown-results a {
+    color: white;
+    display: flex;
+}
+.result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+  color: white;
+}
+
+.result-item:hover {
+  background-color: #444;
+}
+
+.result-item img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+a .div {
+  display: flex;
+  align-items: center;
+}
+
+/* Định dạng phần main */
+
+main {
+    margin-top: 50px;
+    background-color: rgb(25, 25, 25);
+    padding: 20px;
+}
+
+main p {
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    width: 200px;
+}
+
+[class*="movie_list"] {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.funny_movie_list::-webkit-scrollbar,
+.romance_movie_list::-webkit-scrollbar,
+.historical_movie_list::-webkit-scrollbar,
+.history_movie_list::-webkit-scrollbar,
+.action_movie_list::-webkit-scrollbar,
+.psychological_movie_list::-webkit-scrollbar,
+.adventure_movie_list::-webkit-scrollbar,
+.science_fiction_movie_list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.funny_movie_list::-webkit-scrollbar-thumb,
+.romance_movie_list::-webkit-scrollbar-thumb,
+.historical_movie_list::-webkit-scrollbar-thumb,
+.history_movie_list::-webkit-scrollbar-thumb,
+.action_movie_list::-webkit-scrollbar-thumb,
+.psychological_movie_list::-webkit-scrollbar-thumb
+.adventure_movie_list::-webkit-scrollbar-thumb,
+.science_fiction_movie_list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+img {  
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    border: 2px solid orange;
+}
+
+p:hover {
+    color: orange;
+    transition: 0.3s;
+}
+
+.genre {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 20px;
+    
+}
+
+.genre_list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-left: 200px;
+}
+
+.wrapper {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.up_arrow {
+    position:fixed;
+    font-size: 64px;
+    color: #444;
+    width: 3.5%;
+    height: 75px;
+    right: 1%;
+    bottom: 100px;
+    z-index: 100;
+    transition: transform 0.5s ease;
+}
+
+.up_arrow:hover {
+    transform: scale(1.2);
+    color: orange;
+}
+
+#on {
+    font-size: 64px;
+    bottom: 35px;
+    position: fixed;
+    right: 1%;
+    transition: transform 0.5s ease;
+}
+#on:hover {
+    transform: scale(1.2);
+    color: orange;
+}
+
+#off {
+    font-size: 64px;
+    bottom: 35px;
+    position: fixed;
+    right:1%;
+    transition: transform 0.5s ease;
+    display: none;
+}
+#off:hover {
+    transform: scale(1.2);
+}

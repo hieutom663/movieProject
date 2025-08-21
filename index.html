@@ -1,0 +1,75 @@
+<!DOCTYPE html>>
+<html lang="vi">
+    <head>
+        <title>Trang chủ</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'> <!-- Thư viện biểu tượng nút mũi tên hướng lên-->
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header> <!-- Thanh điều hướng -->
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">4Movie</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><p>Trang chủ</p></a></li>
+                        <li><a href="/component/type_movie/type.html"><p>Thể loại</p></a></li>
+                        <li><a href="#Recommended"><p>Đề cử</p></a></li>
+                        <li><a href="#Hot_movie"><p>Phim hot</p></a></li>
+                    </ul>
+                </nav>
+            </div>
+                    <!-- Thanh tìm kiếm và nút tìm kiếm-->
+            <div class="search_container">
+                <input type="text" placeholder="Tìm kiếm phim..." class="search_bar">
+                <a href="/component/login/login.html" class="login_button"  id="loginBtn"><p>Đăng nhập</p></a>
+                <button class="logout_button" id="logoutBtn" onclick="logout()"><p>Đăng xuất</p></button>
+                <div id="searchSuggestions" class="dropdown-results"></div>
+            </div>
+        </header>
+                    <!-- Slide banner -->
+        <div class="container_1">
+            <div class="controllor">
+                <a class="move" href="#"><img class="banner_show" src="https://m.media-amazon.com/images/M/MV5BZDk2YjNhYzEtYzg2ZC00OWEwLWJhYzgtMGUzMWVjNDFmYzI5XkEyXkFqcGc@._V1_.jpg"></img></a>
+                <div class="control prev" >
+                    <i class='bxr bx-arrow-big-left' ></i>
+                </div>
+                <div class="control next">
+                    <i class='bxr bx-arrow-big-right'  ></i> 
+                </div>
+            </div>
+            <div class="list"></div>
+        </div>
+                <!-- Phần chứa các thể loại phim -->
+        <main>
+            <p class="a">Phim đề cử</p>
+            <div class="wrapper">
+                <div class="recommended_movie_list" id="Recommended"></div>
+            </div>
+
+            <p class="a">Phim hot</p>
+            <div class="wrapper">
+                <div class="hot_movie_list" id="Hot_movie"></div>
+            </div>
+            
+            <p class="a"> Toàn bộ phim</p>
+            <div class="wrapper">
+                <div class="all_movie_list"></div>
+            </div>
+            <!--Lên đầu trang-->
+            <div class="up_arrow" onclick="to_top()">
+                <i class='bxr  bx-arrow-up'  ></i> 
+            </div>
+            <!--Nền sáng, tối-->
+            <div class="light_mode">
+                <i id="on" class='bxr  bx-light-bulb-on' onclick="turn_on()" ></i> 
+                <i id="off" class='bxr  bx-light-bulb'  onclick="turn_off()" ></i> 
+            </div>
+        </main>
+</body>
+</html>
+<script src="js/import_film.js"></script>
+<script src="js/app.js"></script>
+<script src="component/login/web.js"></script>

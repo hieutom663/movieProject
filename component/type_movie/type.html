@@ -1,0 +1,160 @@
+<!DOCTYPE html>>
+<html lang="vi">
+    <head>
+        <title>Thể loại</title>
+        <link rel="stylesheet" href="type.css">
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'> <!-- Thư viện biểu tượng nút mũi tên hướng lên-->
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header> <!-- Thanh điều hướng -->
+            <div class="container">
+                <div class="logo">
+                    <a href="../../index.html">4Movie</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Trang chủ</a></li>
+                        <li><a href="../type_movie/type.html">Thể loại</a></li>
+                        <li><a href="../../index.html#Recommended">Đề cử</a></li>
+                        <li><a href="../../index.html#Hot_movie">Phim hot</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+                    <!-- Thanh tìm kiếm và nút tìm kiếm-->
+            <div class="search_container">
+                <input type="text" placeholder="Tìm kiếm phim..." class="search_bar">
+                <a href="../login/login.html" class="login_button"  id="loginBtn"><p>Đăng nhập</p></a>
+                <button class="logout_button" id="logoutBtn" onclick="logout()"><p>Đăng xuất</p></button>
+                <div id="searchSuggestions" class="dropdown-results"></div>
+            </div>
+        </header>
+        <main>
+            <div class="genre">
+                <p>Các thể loại phim:</p>
+                <div class="genre_list">
+                    <a href="#adventure"><p>Phiêu lưu</p></a>
+                    <a href="#animation"><p>Hoạt hình</p></a>
+                    <a href="#biography"><p>Chính kịch</p></a>
+                    <a href="#comedy"><p>Hài</p></a>
+                    <a href="#crime"><p>Tội phạm</p></a>
+                    <a href="#documentary"><p>Tài liệu</p></a>
+                    <a href="#drama"><p>Tình cảm</p></a>
+                    <a href="#fantasy"><p>Giả tưởng</p></a>
+                    <a href="#family"><p>Gia đình</p></a>
+                    <a href="#history"><p>Lịch sử</p></a>
+                    <a href="#horror"><p>Kinh dị</p></a>
+                    <a href="#mystery"><p>Bí ẩn</p></a>
+                    <a href="#musical"><p>Âm nhạc</p></a>
+                    <a href="#political"><p>Chính luận</p></a>
+                    <a href="#psychological"><p>Tâm lý</p></a>
+                    <a href="#romance"><p>Lãng mạn</p></a>
+                    <a href="#science"><p>Thể thao</p></a>
+                    <a href="#science_fiction"><p>Viễn tưởng</p></a>
+                    <a href="#social"><p>Xã hội</p></a>
+                    <a href="#thriller"><p>Giật gân</p></a>
+                    <a href="#war"><p>Chiến tranh</p></a>
+                </div>
+                <hr>
+            </div>
+            <div class="wrapper" id="funny">
+                <p>Hài</p>
+                <div class="funny_movie_list"></div>
+            </div>
+            <div class="wrapper" id="romance">
+                <p>Lãng mạn</p>
+                <div class="romance_movie_list"></div>
+            </div>
+            <div class="wrapper" id="adventure">
+                <p>Phiêu lưu</p>
+                <div class="adventure_movie_list"></div>
+            </div>
+            <div class="wrapper" id="fantasy">
+                <p>Giả tưởng</p>
+                <div class="fantasy_movie_list"></div>
+            </div>
+            <div class="wrapper" id="action">
+                <p>Hành động</p>
+                <div class="action_movie_list"></div>
+            </div>
+            <div class="wrapper" id="thriller">
+                <p>Giật gân </p>
+                <div class="thriller_movie_list"></div> 
+            </div>
+            <div class="wrapper" id="horror">
+                <p>Kinh dị</p>
+                <div class="horror_movie_list"></div>
+            </div>
+            <div class="wrapper" id="psychological">
+                <p>Tâm lý</p>
+                <div class="psychological_movie_list"></div>
+            </div>
+            <div class="wrapper" id="science">
+                <p>Thể thao</p>
+                <div class="sport_movie_list"></div>
+            </div>
+            <div class="wrapper" id="drama">
+                <p>Tình cảm</p>
+                <div class="drama_movie_list"></div>
+            </div>
+            <div class="wrapper" id="mystery">
+                <p>Bí ẩn</p>
+                <div class="mystery_movie_list"></div>
+            </div>
+            <div class="wrapper" id="science_fiction">
+                <p>Viễn tưởng</p>
+                <div class="science_fiction_movie_list"></div>
+            </div>
+            <div class="wrapper" id="documentary">
+                <p>Tài liệu</p>
+                <div class="documentary_movie_list"></div>
+            </div>
+            <div class="wrapper" id="musical">
+                <p>Âm nhạc</p>
+                <div class="music_movie_list"></div>
+            </div>
+            <div class="wrapper" id="biography">
+                <p>Chính kịch</p>
+                <div class="historical_movie_list"></div>
+            </div>
+            <div class="wrapper" id="history">
+                <p>Lịch sử</p>
+                <div class="history_movie_list"></div>
+            </div>
+            <div class="wrapper" id="political">
+                <p>Chính luận</p>
+                <div class="political_movie_list"></div>
+            </div>
+            <div class="wrapper" id="animation">
+                <p>Hoạt hình</p>
+                <div class="animation_movie_list"></div>
+            </div>
+            <div class="wrapper" id="family">
+                <p>Gia đình</p>
+                <div class="family_movie_list"></div>
+            </div>
+            <div class="wrapper" id="war">
+                <p>Chiến tranh</p>
+                <div class="war_movie_list"></div>
+            </div>
+            <div class="wrapper" id="crime">
+                <p>Tội phạm</p>
+                <div class="crime_movie_list"></div>
+            </div>
+            <div class="wrapper" id="western">
+                <p>Xã hội</p>
+                <div class="social_movie_list"></div>
+            </div>
+            <div class="up_arrow" onclick="to_top()">
+                <i class='bxr  bx-arrow-up'  ></i> 
+            </div>
+            <!--Nền sáng, tối-->
+            <div class="light_mode">
+                <i id="on" class='bxr  bx-light-bulb-on' onclick="turn_on()" ></i> 
+                <i id="off" class='bxr  bx-light-bulb'  onclick="turn_off()" ></i> 
+            </div>
+    </body>
+</html>
+<script src="type.js"></script>
+<scrip src ="../login/web.js"></scrip>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <!--Logo cua web-->
+    <div class="container">
+        <!--dang nhap-->
+        <div class="login_logo"><p  class="scale">Đăng ký</p></div>
+        <div class="login_form">
+            <div class="container_input">
+                 <label><p>Tên đăng nhập:</p> <br>
+                    <input id="username" type="text" placeholder="Tên đăng nhập hoặc email" >
+                </label>
+                <label><p>Mật khẩu:</p> <br>
+                    <input id="password" type="password" placeholder="Mật khẩu">
+                </label>
+                <label><p>Nhập lại mật khẩu:</p> <br>
+                    <input id="re_password" type="password" placeholder="Nhập lại mật khẩu">
+                </label>
+                <div class="to_login"><p>Đã có tài khoản?<a href="login.html">Đăng nhập tại đây.</a></p></div>
+            </div>
+            <div>
+                <button id="loggin" class="button" onclick="signin()"><p>Đăng ký</p></button> 
+            </div> 
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="web.js"></script>

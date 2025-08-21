@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Định dạn phông chữ, khoảng cách dòng, màu nền */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Định dạng phần header */
+header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 10%
+}
+
+.logo {
+    padding-left: 10%;
+}
+
+.logo a {
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 0px 30px;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+.search_container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.search_container button p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#logoutBtn {
+    display: none;
+    width: 30%;
+    height: 40px;
+    background-color: #888;
+}
+
+.login_button {
+    display: block;
+}
+
+.search_container p {
+    font-weight: bold;
+}
+
+.search_bar {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+/* Định dạng phần main */
+main {
+    margin-top: 2.5%;
+    padding: 1% 25%;
+    background-color: rgb(25, 25, 25);
+}
+
+.movie_info {
+    width: 1000px;
+}
+.movie_info h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/*Dánh giá phim*/
+.star {
+    font-size: 24px;
+    color: #f0f0f0;
+}
+
+.hovered, .selected {
+    color: orange;
+}
+
+#rating_score {
+    color: white;
+    font-size: 24px;
+}
+
+/*Bình luận*/
+.tag {
+    font-size: 36px;
+    font-weight: bold;
+}
+.wrapper {
+    padding: 5%;
+    
+}
+.comment_box {
+    width: 70%;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+}
+input::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.comment_place {
+    display: flex;
+    flex-direction: column;
+    gap:2%; 
+    padding: 2%;
+}
+ /* Di chuyển lên đầu trang*/
+.up_arrow {
+    position:fixed;
+    font-size: 64px;
+    color: #444;
+    width: 3.5%;
+    height: 75px;
+    right: 1%;
+    bottom: 100px;
+    z-index: 100;
+    transition: transform 0.5s ease;
+}
+
+.up_arrow:hover {
+    transform: scale(1.2);
+    color: orange;
+}
+
+/*Chế độ tối, sáng */
+#on {
+    font-size: 64px;
+    bottom: 35px;
+    position: fixed;
+    right: 1%;
+    transition: transform 0.5s ease;
+}
+#on:hover {
+    transform: scale(1.2);
+    color: orange;
+}
+
+#off {
+    font-size: 64px;
+    bottom: 35px;
+    position: fixed;
+    right:1%;
+    transition: transform 0.5s ease;
+    display: none;
+}
+#off:hover {
+    transform: scale(1.2);
+}
+
+/*Tìm kiếm phim*/
+.dropdown-results {
+  position: absolute;
+  background-color: #2b2b2b;
+  border: 1px solid #444;
+  border-top: none;
+  width: 15%;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 9999;
+  border-radius: 0 0 6px 6px;
+  top: 100%;
+  right: 15%;
+}
+
+.dropdown-results a {
+    color: white;
+    display: flex;
+}
+.result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+  color: white;
+}
+
+.result-item:hover {
+  background-color: #444;
+}
+
+.result-item img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}

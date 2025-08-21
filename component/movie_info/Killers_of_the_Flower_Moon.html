@@ -1,0 +1,66 @@
+<!DOCTYPE html>>
+<html lang="vi">
+    <head>
+        <title>Movie</title>
+        <link rel="stylesheet" href="movie_info.css">
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'> <!-- Thư viện biểu tượng nút mũi tên hướng lên-->
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header> <!-- Thanh điều hướng -->
+            <div class="container">
+                <div class="logo">
+                    <a href="../../index.html">4Movie</a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Trang chủ</a></li>
+                        <li><a href="../type_movie/type.html">Thể loại</a></li>
+                        <li><a href="../../index.html#Hot_movie">Phim hot</a></li>
+                        <li><a href="../../index.html#Recommended">Đề cử</a></li>
+                    </ul>
+                </nav>
+            </div>
+                    <!-- Thanh tìm kiếm và nút tìm kiếm-->
+            <div class="search_container">
+                <input type="text" placeholder="Tìm kiếm phim..." class="search_bar">
+                <a href="/component/login/login.html" class="login_button"  id="loginBtn"><p>Đăng nhập</p></a>
+                <button class="logout_button" id="logoutBtn" onclick="logout()"><p>Đăng xuất</p></button>
+                <div id="searchSuggestions" class="dropdown-results"></div>
+            </div>
+        </header>
+        <main>
+            <div class="watching_movie"></div>
+            <div class="rating">
+                <span class="star" data-value="1"><i class='bx bxs-star'></i></span>
+                <span class="star" data-value="2"><i class='bx bxs-star'></i></span>
+                <span class="star" data-value="3"><i class='bx bxs-star'></i></span>
+                <span class="star" data-value="4"><i class='bx bxs-star'></i></span>
+                <span class="star" data-value="5"><i class='bx bxs-star'></i></span>
+                <span data-value="6"><p id="rating_score"></p></span>
+            </div>
+            <div class="movie_info"></div>
+            <hr>
+            <div class="comment_container">
+                <p class="tag">Bình luận</p>
+                <div class="wrapper">
+                    <input class="comment_box" placeholder="Người tiện tay vẽ hoa vẽ lá. Ta đa tình tưởng đó là mùa xuân."></input>
+                    <button onclick="send()">Gửi</button>
+                </div>
+                <hr>
+                <div class="comment_place"></div>
+            </div>
+            <!--Lên đầu trang-->
+            <div class="up_arrow" onclick="to_top()">
+                <i class='bxr  bx-arrow-up'  ></i> 
+            </div>
+            <!--Nền sáng, tối-->
+            <div class="light_mode">
+                <i id="on" class='bxr  bxs-light-bulb-on' onclick="turn_on()" ></i> 
+                <i id="off" class='bxr  bxs-light-bulb'  onclick="turn_off()" ></i> 
+            </div>
+        </main>
+    </body>
+</html>
+<script src="Killers_of_the_Flower_Moon.js"></script>
+<script src="../login/web.js"></script>
